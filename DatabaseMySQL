@@ -1,0 +1,66 @@
+CREATE DATABASE BMWCars;
+
+CREATE TABLE car (
+	id INT PRIMARY KEY,
+    model VARCHAR(20),
+    year YEAR,
+    color VARCHAR(20),
+    engineCapacity INT,
+    enginePower INT,
+    engineType VARCHAR(30),
+    transmission VARCHAR(1),
+    price DECIMAL(7,2)
+);
+
+-- Inserting a BMW car with id 1
+INSERT INTO car (id, model, year, color, engineCapacity, enginePower, engineType, transmission, price)
+VALUES (1, 'BMW X5', 2022, 'Black', 3000, 350, 'Petrol', 'A', 50000.00);
+
+-- Inserting a BMW car with id 2
+INSERT INTO car (id, model, year, color, engineCapacity, enginePower, engineType, transmission, price)
+VALUES (2, 'BMW 3 Series', 2021, 'White', 2000, 250, 'Diesel', 'M', 40000.00);
+
+-- Inserting a BMW car with id 3
+INSERT INTO car (id, model, year, color, engineCapacity, enginePower, engineType, transmission, price)
+VALUES (3, 'BMW M5', 2023, 'Blue', 4000, 600, 'Petrol', 'A', 80000.00);
+
+
+-- Inserting a BMW car with id 4
+INSERT INTO car (id, model, year, color, engineCapacity, enginePower, engineType, transmission, price)
+VALUES (4, 'BMW 5 Series', 2022, 'Silver', 2500, 300, 'Diesel', 'A', 45000.00);
+
+-- Inserting a BMW car with id 5
+INSERT INTO car (id, model, year, color, engineCapacity, enginePower, engineType, transmission, price)
+VALUES (5, 'BMW X3', 2023, 'Black', 2000, 240, 'Petrol', 'A', 38000.00);
+
+-- Inserting a BMW car with id 6
+INSERT INTO car (id, model, year, color, engineCapacity, enginePower, engineType, transmission, price)
+VALUES (6, 'BMW 7 Series', 2021, 'White', 3500, 400, 'Diesel', 'M', 65000.00);
+
+-- Inserting a BMW car with id 7
+INSERT INTO car (id, model, year, color, engineCapacity, enginePower, engineType, transmission, price)
+VALUES (7, 'BMW X1', 2022, 'Blue', 1800, 200, 'Petrol', 'A', 32000.00);
+
+-- Inserting a BMW car with id 8
+INSERT INTO car (id, model, year, color, engineCapacity, enginePower, engineType, transmission, price)
+VALUES (8, 'BMW 4 Series', 2023, 'Red', 3000, 350, 'Petrol', 'A', 48000.00);
+
+-- Inserting a BMW car with id 9
+INSERT INTO car (id, model, year, color, engineCapacity, enginePower, engineType, transmission, price)
+VALUES (9, 'BMW X6', 2022, 'Black', 4000, 500, 'Diesel', 'M', 75000.00);
+
+-- Inserting a BMW car with id 10
+INSERT INTO car (id, model, year, color, engineCapacity, enginePower, engineType, transmission, price)
+VALUES (10, 'BMW i3', 2021, 'Silver', 1500, 170, 'Electric', 'A', 35000.00);
+
+-- Inserting a BMW car with id 11
+INSERT INTO car (id, model, year, color, engineCapacity, enginePower, engineType, transmission, price)
+VALUES (11, 'BMW M4', 2023, 'Blue', 3000, 450, 'Petrol', 'M', 62000.00);
+
+-- Inserting a BMW car with id 12
+INSERT INTO car (id, model, year, color, engineCapacity, enginePower, engineType, transmission, price)
+VALUES (12, 'BMW X2', 2022, 'White', 2000, 230, 'Diesel', 'A', 36000.00);
+
+-- Inserting a BMW car with id 13
+INSERT INTO car (id, model, year, color, engineCapacity, enginePower, engineType, transmission, price)
+VALUES (13, 'BMW 8 Series', 2023, 'Black', 4400, 600, 'Petrol', 'A', 95000.00);
