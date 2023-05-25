@@ -330,12 +330,18 @@ class Window:
             found_items = []
             all_items_values = []
 
-            for item_id in self.grid.get_children():
-                id_value = self.grid.item(item_id)['text']
-                print(id_value)
-                item_values = self.grid.item(item_id)['values']
-                item_values.append(id_value)
-                all_items_values.append(item_values)
+            self.cnn.connect()
+            data = self.cnn.execute_select("car")
+            for row in data:
+                all_items_values.append(list(row))
+            self.cnn.disconnect()
+
+            # for item_id in self.grid.get_children():
+            #     id_value = self.grid.item(item_id)['text']
+            #     print(id_value)
+            #     item_values = self.grid.item(item_id)['values']
+            #     item_values.append(id_value)
+            #     all_items_values.append(item_values)
 
             for j in range(len(all_items_values)):
                 if search_text.lower() == str(all_items_values[j][i]).lower():
@@ -347,7 +353,7 @@ class Window:
             print(found_items)
             # Agregar los items encontrados al treeview
             for data in found_items:    
-                self.grid.insert('', tk.END, text=data[-1], values=data[:-1])
+                self.grid.insert('', tk.END, text=data[0], values=data[1:])
             
             new_window.destroy()
 
@@ -355,15 +361,15 @@ class Window:
             selected_option = radio_var.get()
 
             if(selected_option == "opcion1"):
-                show_search_data(8, search_text)
-            elif(selected_option == "opcion2"):
                 show_search_data(0, search_text)
+            elif(selected_option == "opcion2"):
+                show_search_data(1, search_text)
             elif(selected_option == "opcion3"):
-                show_search_data(1,search_text)
+                show_search_data(2,search_text)
             elif(selected_option == "opcion4"):
-                show_search_data(7, search_text)
-            else:
                 show_search_data(8, search_text)
+            else:
+                show_search_data(0, search_text)
 
             
 
