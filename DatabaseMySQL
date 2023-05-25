@@ -1,15 +1,23 @@
-CREATE DATABASE BMWCars;
+-- Check if database exists
+CREATE DATABASE IF NOT EXISTS BMWCars;
 
+-- Switch to the database
+USE BMWCars;
+
+-- Drop the table if it already exists
+DROP TABLE IF EXISTS car;
+
+-- Create the table
 CREATE TABLE car (
-	id INT PRIMARY KEY,
-    model VARCHAR(20),
-    year YEAR,
-    color VARCHAR(20),
-    engineCapacity INT,
-    enginePower INT,
-    engineType VARCHAR(30),
-    transmission VARCHAR(1),
-    price DECIMAL(7,2)
+    id INT PRIMARY KEY,
+    model VARCHAR(20) NOT NULL,
+    year YEAR NOT NULL,
+    color VARCHAR(20) NOT NULL,
+    engineCapacity INT NOT NULL,
+    enginePower INT NOT NULL,
+    engineType VARCHAR(30) NOT NULL,
+    transmission VARCHAR(10) NOT NULL,
+    price DECIMAL(7,2) NOT NULL
 );
 
 -- Inserting a BMW car with id 1
