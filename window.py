@@ -33,93 +33,99 @@ class Window:
 
     def create_widgets(self):
         # FRAME BUTTONS
-        frame1 = tk.Frame(self.root, width=200, height=600, bg="grey")
+        frame1 = tk.Frame(self.root, width=200, height=600, bg="#8f8f8f")
         frame1.place(x=0, y=0)
 
         self.buttonInit = tk.Button(frame1, text="Iniciar", command=self.fnInit,
-                                    width=24, height=2)
+                                    width=24, height=2, background="#0b0e15", 
+                                    foreground="white")
         self.buttonInit.place(x=10, y=20)
 
         self.buttonNew = tk.Button(frame1, text="New", command=self.InsertData,
-                               width=24, height=2)
+                               width=24, height=2, background="#0b0e15", foreground="white")
         self.buttonNew.place(x=10, y=100)
         
         self.buttonUpdate = tk.Button(frame1, text="Update", command=self.UpdateData, 
-                                 width=24, height=2)
+                                 width=24, height=2, background="#0b0e15", foreground="white")
         self.buttonUpdate.place(x=10, y=150)
 
         self.buttonDelete = tk.Button(frame1, text="Delete", command=self.DeleteData, 
-                                 width=24, height=2) 
+                                 width=24, height=2, background="#0b0e15", foreground="white") 
         self.buttonDelete.place(x=10, y=200)
 
         self.buttonSearch = tk.Button(frame1, text="Search", command=self.SearchData, 
-                                 width=24, height=2) 
+                                 width=24, height=2, background="#0b0e15", foreground="white") 
         self.buttonSearch.place(x=10, y=250)         
 
         self.buttonReload = tk.Button(frame1, text="Reload", command=self.fnInit, 
-                                 width=24, height=2) 
+                                 width=24, height=2, background="#0b0e15", foreground="white") 
         self.buttonReload.place(x=10, y=300)
 
         # FRAME INPUT 25 + 40
-        self.frame2 = tk.Frame(self.root, width=300, height=600, bg="whitesmoke")
+        self.frame2 = tk.Frame(self.root, width=300, height=600, bg="#CCCCCC")
         
 
-        lbl1 = tk.Label(self.frame2, text="ID")
+        lbl1 = tk.Label(self.frame2, text="ID", background="#CCCCCC")
         lbl1.place(x=10, y=15)
         self.entry1 = tk.Entry(self.frame2, width=30, font=font.Font(size=12))
         self.entry1.place(x=10, y=40)
 
-        lbl2 = tk.Label(self.frame2, text="Modelo:")
+        lbl2 = tk.Label(self.frame2, text="Modelo:", background="#CCCCCC")
         lbl2.place(x=10, y=80)
         self.entry2 = tk.Entry(self.frame2, width=30, font=font.Font(size=12))
         self.entry2.place(x=10, y=105)
 
-        lbl3 = tk.Label(self.frame2, text="Año:")
+        lbl3 = tk.Label(self.frame2, text="Año:", background="#CCCCCC")
         lbl3.place(x=10, y=145)
         self.entry3 = tk.Entry(self.frame2, width=30, font=font.Font(size=12))
         self.entry3.place(x=10, y=170)
 
-        lbl4 = tk.Label(self.frame2, text="Color:")
+        lbl4 = tk.Label(self.frame2, text="Color:", background="#CCCCCC")
         lbl4.place(x=10, y=210)
         self.entry4 = tk.Entry(self.frame2, width=30, font=font.Font(size=12))
         self.entry4.place(x=10, y=235)
 
-        lbl5 = tk.Label(self.frame2, text="Capacidad del Motor:")
+        lbl5 = tk.Label(self.frame2, text="Capacidad del Motor:", background="#CCCCCC")
         lbl5.place(x=10, y=275)
         self.entry5 = tk.Entry(self.frame2, width=30, font=font.Font(size=12))
         self.entry5.place(x=10, y=300)
 
-        lbl6 = tk.Label(self.frame2, text="Potencia del Motor:")
+        lbl6 = tk.Label(self.frame2, text="Potencia del Motor:", background="#CCCCCC")
         lbl6.place(x=10, y=340)
         self.entry6 = tk.Entry(self.frame2, width=30, font=font.Font(size=12))
         self.entry6.place(x=10, y=365)
 
-        lbl7 = tk.Label(self.frame2, text="Tipo de Motor:")
+        lbl7 = tk.Label(self.frame2, text="Tipo de Motor:", background="#CCCCCC")
         lbl7.place(x=10, y=405)
         self.entry7 = tk.Entry(self.frame2, width=30, font=font.Font(size=12))
         self.entry7.place(x=10, y=430)
 
-        lbl8 = tk.Label(self.frame2, text="Transmision:")
+        lbl8 = tk.Label(self.frame2, text="Transmision:", background="#CCCCCC")
         lbl8.place(x=10, y=470)
         self.entry8 = tk.Entry(self.frame2, width=30, font=font.Font(size=12))
         self.entry8.place(x=10, y=495)
 
-        lbl9 = tk.Label(self.frame2, text="Precio")
+        lbl9 = tk.Label(self.frame2, text="Precio", background="#CCCCCC")
         lbl9.place(x=10, y=535)
         self.entry9 = tk.Entry(self.frame2, width=30, font=font.Font(size=12))
         self.entry9.place(x=10, y=560)
 
         # Frame Buttons Save and Cancel
         self.buttonSave = tk.Button(frame1, text="Save", command=self.save,
-                               width=24, height=2, background="green", foreground="black")
+                               width=24, height=2, background="#006400", foreground="black")
         
         
         self.buttonCancel = tk.Button(frame1, text="Cancel", command=self.cancel,
-                               width=24, height=2, background="red", foreground="black")
+                               width=24, height=2, background="#8B0000", foreground="black")
         
+        style = ttk.Style()
+        style.configure("Custom.Treeview", background="whitesmoke", 
+                        foreground="black")
+
         # Table's frame of database
         self.grid = ttk.Treeview(self.root, columns=("col1","col2","col3","col4"
-                                                     , "col5", "col6", "col7", "col8"))
+                                                     , "col5", "col6", "col7", "col8"), 
+                                                     style="Custom.Treeview")
         self.grid.column("#0", width=50, anchor=tk.CENTER)
         self.grid.column("col1", width=70, anchor=tk.CENTER)
         self.grid.column("col2", width=70, anchor=tk.CENTER)
@@ -174,6 +180,7 @@ class Window:
         self.buttonNew.config(state="normal")
         self.buttonDelete.config(state="normal")
         self.buttonSearch.config(state="normal")
+        self.buttonReload.config(state="normal")
         
 
     def save(self):
@@ -243,6 +250,7 @@ class Window:
         self.buttonNew.config(state="normal")
         self.buttonDelete.config(state="normal")
         self.buttonSearch.config(state="normal")
+        self.buttonReload.config(state="normal")
 
         self.buttonSave.place_forget()
         self.buttonCancel.place_forget()
@@ -259,6 +267,7 @@ class Window:
         self.buttonNew.config(state="disabled")
         self.buttonDelete.config(state="disabled")
         self.buttonSearch.config(state="disabled")
+        self.buttonReload.config(state="disabled")
 
 
     def UpdateData(self):
@@ -274,6 +283,7 @@ class Window:
             self.buttonNew.config(state="disabled")
             self.buttonDelete.config(state="disabled")
             self.buttonSearch.config(state="disabled")
+            self.buttonReload.config(state="disabled")
             
             id_selectioned = self.grid.item(selection)['text']
             values = self.grid.item(selection)['values']
