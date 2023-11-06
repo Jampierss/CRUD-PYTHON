@@ -21,6 +21,16 @@ The application offers the following features:
 <li>Delete: Allows deleting an existing record by selecting it from the list.</li>
 <li>Search: Displays a search window</li>
 
+<h2>View</h2>
+
+[![screenshoot1.jpg](https://i.postimg.cc/ydjsP6z7/screenshoot1.jpg)](https://postimg.cc/dkhbQY1f)
+
+[![screenshoot2.jpg](https://i.postimg.cc/BZzdGPpd/screenshoot2.jpg)](https://postimg.cc/F1jPyR2Z)
+
+[![screenshoot3.jpg](https://i.postimg.cc/13SSLN5y/screenshoot3.jpg)](https://postimg.cc/8jZxvc6Y)
+
+[![screenshoot4.jpg](https://i.postimg.cc/yNNMHhqC/screenshoot4.jpg)](https://postimg.cc/FY2WbLsT)
+
 <h2>Contact</h2>
   
 If you have any questions or suggestions, feel free to contact me via email at jimmyflorian2005@gmail.com<br>
